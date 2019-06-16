@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.util.List;
 
+import in.peopleinteractive.adapter.RandomUserAdapter;
 import in.peopleinteractive.model.pojo.RandomUser;
 
 /**
@@ -17,7 +18,6 @@ public class Contract {
 
         void onGetDataFailure(String message);
 
-        void onRecyclerClick(int position, List<RandomUser> scanList, android.view.View view, Context context);
     }
 
     public interface Presenter {
@@ -33,6 +33,19 @@ public class Contract {
         void onSuccess(String message, List<RandomUser> list);
 
         void onFailure(String message);
+    }
+
+    public interface RepositoryRowView {
+
+        void setName(String title);
+
+        void setDetails(String details);
+
+        void setImage(Context context, String imageURL);
+
+        void setButtonClick(Context context, List<RandomUser> randomUserList, int position, RandomUserAdapter randomUserAdapter);
+
+        void setDeclineButtonClick(Context context, List<RandomUser> randomUserList, int position, RandomUserAdapter randomUserAdapter);
     }
 
 }
