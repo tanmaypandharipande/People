@@ -34,15 +34,14 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="TextView"
+                android:text="@string/name"
                 android:textColor="@color/colorName"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -55,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/details"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -63,11 +62,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <ImageView
-                android:id="@+id/button"
+                android:id="@+id/button_decline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="84dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/circle_button"
                 android:drawableRight="@drawable/ic_clear_black_24dp"
@@ -75,10 +73,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 app:srcCompat="@drawable/ic_clear_black_24dp"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="VectorDrawableCompat"
+                android:layout_marginLeft="84dp" />
 
             <ImageView
-                android:id="@+id/button2"
+                android:id="@+id/button_connect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="80dp"
@@ -99,10 +98,10 @@
                 android:layout_marginLeft="80dp"
                 android:layout_marginStart="80dp"
                 android:layout_marginTop="8dp"
-                android:text="Decline"
+                android:text="@string/decline"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/button_decline" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -112,10 +111,10 @@
                 android:layout_marginEnd="80dp"
                 android:layout_marginRight="80dp"
                 android:layout_marginTop="8dp"
-                android:text="Connect"
+                android:text="@string/connect"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                app:layout_constraintTop_toBottomOf="@+id/button_connect" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

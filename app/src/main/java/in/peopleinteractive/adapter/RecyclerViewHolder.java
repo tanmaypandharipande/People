@@ -33,8 +33,8 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements Contr
         textViewName = itemView.findViewById(R.id.textView);
         textViewDetails = itemView.findViewById(R.id.textView2);
         imageView = (ImageView) itemView.findViewById(R.id.imageView);
-        imageView_connect = (ImageView) itemView.findViewById(R.id.button2);
-        imageView_decline = (ImageView) itemView.findViewById(R.id.button);
+        imageView_connect = (ImageView) itemView.findViewById(R.id.button_connect);
+        imageView_decline = (ImageView) itemView.findViewById(R.id.button_decline);
     }
 
     @Override

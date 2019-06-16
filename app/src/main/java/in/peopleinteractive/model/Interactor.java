@@ -15,6 +15,7 @@ import java.util.List;
 
 import in.peopleinteractive.R;
 import in.peopleinteractive.contract.Contract;
+import in.peopleinteractive.helper.Constants;
 import in.peopleinteractive.helper.Utilities;
 import in.peopleinteractive.helper.network.ServerErrorCallback;
 import in.peopleinteractive.helper.network.ServerJSONObjectCallback;
@@ -41,7 +42,7 @@ public class Interactor implements Contract.Interactor {
         new ApiService().getData(context, requestQueue, new ServerJSONObjectCallback() {
             @Override
             public void onSuccess(JsonObject result) {
-                JsonArray array = result.getAsJsonArray("results");
+                JsonArray array = result.getAsJsonArray(Constants.JSON_ARRAY_NAME);
                 Gson gson = new Gson();
                 for (int i = 0; i < array.size(); i++) {
                     String object = String.valueOf(array.get(i));
@@ -49,13 +50,13 @@ public class Interactor implements Contract.Interactor {
                     randomUserList.add(scan);
                 }
                 progressDialog.dismiss();
-                mOnGetDatalistener.onSuccess("Success", randomUserList);
+                mOnGetDatalistener.onSuccess(Constants.SUCCESS, randomUserList);
             }
         }, null, new ServerErrorCallback() {
             @Override
             public void onFailure(VolleyError error) {
                 progressDialog.dismiss();
-                mOnGetDatalistener.onFailure("Failure");
+                mOnGetDatalistener.onFailure(Constants.FAILURE);
             }
         });
     }

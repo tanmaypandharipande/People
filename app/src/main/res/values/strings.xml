@@ -4,4 +4,10 @@
     <!--Progress Loader-->
     <string name="please_wait">Please wait</string>
     <string name="loading">Loading</string>
+
+    <!--Row-->
+    <string name="name">Name</string>
+    <string name="details">Details</string>
+    <string name="connect">Connect</string>
+    <string name="decline">Decline</string>
 </resources>
